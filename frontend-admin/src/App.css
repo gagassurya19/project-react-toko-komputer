@@ -1,0 +1,8 @@
+.watermark {
+    opacity: 0.5;
+    color: BLACK;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    font-size: x-large;
+}
