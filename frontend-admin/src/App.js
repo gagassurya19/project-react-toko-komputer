@@ -16,7 +16,7 @@ class App extends React.Component{
     <div>
         <div className="watermark">
             WORK IN PROGRESS <br/>
-            <a href="https://github.com/gagassurya19/project-react-toko-komputer">./branch frontend-admin</a>
+            <a href="https://github.com/gagassurya19/project-react-toko-komputer">./branch Main</a>
         </div>
         <Switch>
             <Route exact path="/" component={Home} />
