@@ -144,8 +144,11 @@ class Customer extends React.Component{
         return(
         <div>
             <Navbar />
-            <div className="container">
+            <div className="container glass mt-3 p-5">
                 <h3 className="text-bold text-info mt-2">Customer List</h3>
+                <button className="btn btn-success mb-2" onClick={() => this.Add()}>
+                    Add customer
+                </button>
                 <div className="row">
                     { this.state.customers.map( item => (
                         <CustomerList
@@ -159,13 +162,10 @@ class Customer extends React.Component{
                         />
                     ))}
                 </div>
-                <button className="btn btn-success" onClick={() => this.Add()}>
-                    Add customer
-                </button>
             </div>
 
             {/* modal customer 1 */}
-            <div class="modal fade" id="modal_customer" tabindex="-1" aria-labelledby="modal_customerLabel" aria-hidden="true">
+            <div class="modal fade" id="modal_customer" data-backdrop="false">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">

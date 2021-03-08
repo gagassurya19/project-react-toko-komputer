@@ -141,28 +141,35 @@ class Product extends React.Component{
         return(
         <div>
             <Navbar />
-            <div className="container">
-                <h3 className="text-bold text-info">Product List</h3>
-                <button type="button" className="btn btn-success mt-2 mb-2" onClick={() => this.Add()}>
-                    Add Product
-                </button>
-                <div className="row">
-                    { this.state.products.map( item => (
-                        <ProductList
-                            key = {item.product_id}
-                            name = {item.name}
-                            price = {item.price}
-                            stock = {item.stock}
-                            image = { product_image_url + "/" + item.image}
-                            onEdit = {() => this.Edit(item)}
-                            onDrop = {() => this.dropProduct(item)}
-                        />
-                    ))}
+            <div className="container glass mt-3 mb-3">
+                <div className="mb-1 p-3">
+                    <h3 className="text-bold text-info">Product List</h3>
+                    <button type="button" className="btn btn-success" onClick={() => this.Add()}>
+                        Add Product
+                    </button>
+                </div>
+                <div className="m-4">
+                    <div className="row">
+                        { this.state.products.map( item => (
+                            <ProductList
+                                key = {item.product_id}
+                                name = {item.name}
+                                price = {item.price}
+                                stock = {item.stock}
+                                image = { product_image_url + "/" + item.image}
+                                onEdit = {() => this.Edit(item)}
+                                onDrop = {() => this.dropProduct(item)}
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div className="text-center">
+                    <p className="text-info mb-2">Product List</p>
                 </div>
             </div>
 
             {/* modal product*/}
-            <div class="modal fade" id="modal_product" tabindex="-1" aria-labelledby="modal_productLabel" aria-hidden="true">
+            <div class="modal fade" id="modal_product" data-backdrop="false">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">

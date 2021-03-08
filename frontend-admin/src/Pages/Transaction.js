@@ -49,7 +49,7 @@ class Transaction extends React.Component {
         return (
             <div>
                 <Navbar />
-                <div className="container">
+                <div className="container glass mt-3 p-4">
                     <h3 className="text-bold text-info mt-2">
                         Transactions List
                     </h3>

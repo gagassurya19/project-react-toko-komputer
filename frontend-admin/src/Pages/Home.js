@@ -140,37 +140,46 @@ class Home extends React.Component{
     render(){
         return(
             <div>
-                <Navbar />
-                <div className="container mt-4">
-                    <div class="alert alert-info" role="alert">
-                        <strong>Welcome back, </strong> {this.state.adminName}
+                <Navbar/>
+                <div className="row glass mt-3">
+                    <div className="col-3">
+                        <div className="sidebar m-3">
+                            <span className="p-1">Welcome, {this.state.adminName}!</span>
+                            <div class="in-sidebar">
+                                <h3>Admin Page</h3>
+                            </div>
+                        </div>
                     </div>
-                    <div className="row">
-                        <div class="col-12 col-lg card text-white bg-danger m-1" style={{ width: '18rem'}}>
-                            <div class="card-body text-center">
-                                <h5 class="card-text"><strong>ADMIN</strong></h5>
-                                <h1 class="card-text"><strong>{this.state.adminsCount}</strong></h1>
-                            </div>
-                        </div>
+                    <div className="col-9">
+                        <div className="m-3">
+                            <div className="row">
+                                <div class="col-12 card1" style={{ width: '18rem'}}>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-text"><strong>ADMIN</strong></h5>
+                                        <h1 class="card-text"><strong>{this.state.adminsCount}</strong></h1>
+                                    </div>
+                                </div>
 
-                        <div class="col-12 col-lg card text-white bg-warning m-1" style={{ width: '18rem'}}>
-                            <div class="card-body text-center">
-                                <h5 class="card-text"><strong>CUSTOMER</strong></h5>
-                                <h1 class="card-text"><strong>{this.state.customersCount}</strong></h1>
-                            </div>
-                        </div>
+                                <div class="col card1 m-2" style={{ width: '18rem'}}>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-text"><strong>CUSTOMER</strong></h5>
+                                        <h1 class="card-text"><strong>{this.state.customersCount}</strong></h1>
+                                    </div>
+                                </div>
 
-                        <div class="col-12 col-lg card text-white bg-success m-1" style={{ width: '18rem'}}>
-                            <div class="card-body text-center">
-                                <h5 class="card-text"><strong>PRODUCT</strong></h5>
-                                <h1 class="card-text"><strong>{this.state.productsCount}</strong></h1>
-                            </div>
-                        </div>
+                                <div class="col card1 m-2" style={{ width: '18rem'}}>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-text"><strong>PRODUCT</strong></h5>
+                                        <h1 class="card-text"><strong>{this.state.productsCount}</strong></h1>
+                                    </div>
+                                </div>
 
-                        <div class="col-12 col-lg card text-white bg-primary m-1" style={{ width: '18rem'}}>
-                            <div class="card-body text-center">
-                                <h5 class="card-text"><strong>TRANSACTION</strong></h5>
-                                <h1 class="card-text"><strong>{this.state.transactionsCount}</strong></h1>
+                                <div class="col card1 m-2" style={{ width: '18rem'}}>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-text"><strong>TRANSACTION</strong></h5>
+                                        <h1 class="card-text"><strong>{this.state.transactionsCount}</strong></h1>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

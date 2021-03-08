@@ -4,7 +4,6 @@ app.use(express.json())
 
 const models = require("../models/index")
 const customer = models.customer
-const admin = models.admin
 
 const multer = require("multer")
 const path = require("path")
@@ -170,7 +169,7 @@ app.post("/auth", async (req,res) => {
         password: md5(req.body.password)
     }
 
-    let result = await admin.findOne({where: params})
+    let result = await customer.findOne({where: params})
     if(result){
         let payload = JSON.stringify(result)
         // generate token

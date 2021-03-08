@@ -134,9 +134,9 @@ class Admin extends React.Component {
         return (
             <div>
                 <Navbar />
-                <div className="container">
+                <div className="container glass mt-3 p-5">
                     <h3 className="text-bold text-info mt-2">Admin List</h3>
-                    <table class="table table-hover">
+                    <table class="card1 table table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -168,7 +168,7 @@ class Admin extends React.Component {
                     </button>
 
                     {/* modal admin */}
-                    <div class="modal fade" id="modal_admin" tabindex="-1" aria-labelledby="modal_adminLabel" aria-hidden="true">
+                    <div class="modal fade" id="modal_admin" data-backdrop="false">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">

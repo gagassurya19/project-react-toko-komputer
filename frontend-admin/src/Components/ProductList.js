@@ -3,7 +3,7 @@ import React from "react";
 class ProductList extends React.Component{
     render(){
         return (
-            <div class="card col-3">
+            <div class="card col-3 m-3">
                 <img src={this.props.image} class="card-img-top" alt={this.props.name}/>
                 <div class="card-body">
                     <h5 class="card-title">{this.props.name}</h5>
